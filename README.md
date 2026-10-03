@@ -82,7 +82,7 @@ release; they differ only in the compatibility they declare.
 1. In Foundry, go to **Add-on Modules → Install Module**.
 2. Paste:
 ```
-https://github.com/sargas79/Victory-Counter-v13/releases/latest/download/module.json
+https://github.com/sargas79/sargas-victory-counter-v13/releases/latest/download/module.json
 ```
 3. Click **Install**, then enable the module in your world.
 
@@ -92,10 +92,10 @@ Declares `maximum: 13`, so Foundry will never offer it as an update to a v14
 world. Use it if you run v13 and want a build that stays on the v13 line:
 
 ```
-https://github.com/sargas79/Victory-Counter-v13/releases/latest/download/module-v13.json
+https://github.com/sargas79/sargas-victory-counter-v13/releases/latest/download/module-v13.json
 ```
 
-The two are the same package id (`victory-counter`), so a world can have one or
+The two are the same package id (`sargas-victory-counter`), so a world can have one or
 the other installed, not both. Switching tracks means uninstalling and
 reinstalling from the other URL; the world's tracks live in world settings and
 survive that untouched.
@@ -103,11 +103,11 @@ survive that untouched.
 ### Local development
 
 Clone or symlink this repository into your Foundry user data directory under a
-folder named exactly `victory-counter` (the name must match `module.json.id`),
+folder named exactly `sargas-victory-counter` (the name must match `module.json.id`),
 so the path is:
 
 ```
-<FoundryUserData>/Data/modules/victory-counter/
+<FoundryUserData>/Data/modules/sargas-victory-counter/
 ```
 
 Restart Foundry, then enable **Victory Counter** in
@@ -116,7 +116,7 @@ Restart Foundry, then enable **Victory Counter** in
 On Windows, a symlink from an admin PowerShell prompt:
 
 ```powershell
-New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\FoundryVTT\Data\modules\victory-counter" -Target "C:\path\to\Victory-Counter-v13"
+New-Item -ItemType SymbolicLink -Path "$env:LOCALAPPDATA\FoundryVTT\Data\modules\sargas-victory-counter" -Target "C:\path\to\sargas-victory-counter-v13"
 ```
 
 ## Usage
@@ -329,7 +329,7 @@ still ahead only if the GM has revealed them.
 ### Macro API
 
 ```js
-const vc = game.modules.get("victory-counter").api;
+const vc = game.modules.get("sargas-victory-counter").api;
 
 // A 6-step infiltration, and the alarm working against the party
 const infiltration = await vc.create({ title: "Infiltration Points", target: 6 });
@@ -539,11 +539,11 @@ resolved. Run it once per v13 world before trusting the rest of the plan.
    Panel**) button for the GM. Those buttons appearing is the check: they are
    registered from `registerHooks()`, so nothing draws them unless the module
    parsed and its hooks ran.
-2. The console carries no `victory-counter` error and no core deprecation
-   warning naming a file under `modules/victory-counter/`.
+2. The console carries no `sargas-victory-counter` error and no core deprecation
+   warning naming a file under `modules/sargas-victory-counter/`.
 3. Optional version banner: turn on **Debug Logging** in the module settings and
    reload. The console then prints
-   `[victory-counter] Ready. Core: 13.351. System: <id> <version>.` This line is
+   `[sargas-victory-counter] Ready. Core: 13.351. System: <id> <version>.` This line is
    debug-gated, so with the setting off — its default — its absence means
    nothing and is not a failure.
 4. Open the control panel. It has a title bar, an icon, and a working resize
@@ -748,7 +748,7 @@ resolved. Run it once per v13 world before trusting the rest of the plan.
 
 **Permissions and sync**
 
-63. As a player, try the API: `game.modules.get("victory-counter").api
+63. As a player, try the API: `game.modules.get("sargas-victory-counter").api
     .increase(id)`. It is refused with a GM-only notification.
 64. With a GM and a player connected, change a track on the GM screen. The
     player's HUD updates immediately without a reload.

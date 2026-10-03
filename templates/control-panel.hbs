@@ -232,16 +232,16 @@
           the same track differently: the circle is a per-track choice and wins
           over all three of the readouts it was chosen instead of. --}}
     {{#if circle}}
-    {{> "modules/victory-counter/templates/rune-circle.hbs"}}
+    {{> "modules/sargas-victory-counter/templates/rune-circle.hbs"}}
     {{else if threshold}}
-    {{> "modules/victory-counter/templates/threshold-ladder.hbs"}}
+    {{> "modules/sargas-victory-counter/templates/threshold-ladder.hbs"}}
     {{else if stepped}}
     {{!-- The strip replaces the ring for the same reason the ladder does: it
           already answers "how far along is this", and more precisely. --}}
-    {{> "modules/victory-counter/templates/step-track.hbs"}}
+    {{> "modules/sargas-victory-counter/templates/step-track.hbs"}}
     {{else if ../rings}}
     <div class="pvc-ring-wrap pvc-ring-compact">
-      {{> "modules/victory-counter/templates/progress-ring.hbs" ring=../ring}}
+      {{> "modules/sargas-victory-counter/templates/progress-ring.hbs" ring=../ring}}
     </div>
     {{/if}}
 

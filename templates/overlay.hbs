@@ -181,9 +181,9 @@
           and below stay either way — they say what the position *means*, which
           neither drawing does. --}}
     {{#if circle}}
-    {{> "modules/victory-counter/templates/rune-circle.hbs"}}
+    {{> "modules/sargas-victory-counter/templates/rune-circle.hbs"}}
     {{else}}
-    {{> "modules/victory-counter/templates/threshold-ladder.hbs"}}
+    {{> "modules/sargas-victory-counter/templates/threshold-ladder.hbs"}}
     {{/if}}
 
     {{#if bandDescription}}
@@ -233,7 +233,7 @@
       <span class="pvc-kicker">{{#if stepLabel}}{{stepLabel}}{{else}}{{percent}}%{{/if}}</span>
     </div>
 
-    {{> "modules/victory-counter/templates/rune-circle.hbs"}}
+    {{> "modules/sargas-victory-counter/templates/rune-circle.hbs"}}
 
     {{else if stepped}}
     {{!-- ===== Step readout ===== --}}
@@ -248,12 +248,12 @@
       <span class="pvc-kicker">{{#if stepLabel}}{{stepLabel}}{{else}}{{percent}}%{{/if}}</span>
     </div>
 
-    {{> "modules/victory-counter/templates/step-track.hbs"}}
+    {{> "modules/sargas-victory-counter/templates/step-track.hbs"}}
 
     {{else if ../rings}}
     {{!-- ===== Ring readout ===== --}}
     <div class="pvc-ring-wrap">
-      {{> "modules/victory-counter/templates/progress-ring.hbs" ring=../ring}}
+      {{> "modules/sargas-victory-counter/templates/progress-ring.hbs" ring=../ring}}
     </div>
     {{else}}
     {{!-- ===== Linear readout ===== --}}
